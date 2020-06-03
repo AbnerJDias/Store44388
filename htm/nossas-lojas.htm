@@ -1,0 +1,260 @@
+<style>
+.left-bar{
+  display: none;
+}
+
+.nav-menu .item .title {
+    color: #fff!important;
+    padding: .625rem 1.25rem;
+}
+
+* {
+  box-sizing: border-box
+}
+
+.container__lojas {
+  margin: 0 auto;
+  padding: 2%;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-auto-rows: minmax(520px, 1fr);
+  grid-gap: 30px;
+  justify-content: center;
+  box-sizing: border-box
+}
+
+.box__lojas {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #efefef;
+  transition: .5s;
+  border-radius: 10px;
+}
+
+.box__lojas:hover {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+  transform: translateY(-4px)
+}
+
+.img-box__lojas {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .35s cubic-bezier(.15, .78, .46, .8);
+  z-index: 1
+}
+
+.img-box__lojas img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all .5s ease-in-out
+}
+
+.img-box__lojas::after {
+  content: attr(title);
+  font-family: sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 111%;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.05em;
+  font-weight: 700;
+  width: 250%;
+  opacity: 1;
+  border-radius: 50%;
+  height: 45.5%;
+  padding-top: 1rem;
+  background: #efefef;
+  transition: .2s;
+  color: #666;
+  letter-spacing: -.6px;
+  box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, .3)
+}
+
+.img-box__lojas::before {
+  position: absolute;
+  content: attr(data-author);
+  bottom: 2.5%;
+  font-weight: 400;
+  color: #fff;
+  z-index: 2001;
+  text-align: center;
+  width: 100%;
+  color: #001A4D;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-size: .8em;
+  opacity: 1
+}
+
+.container__lojas .box__lojas:hover .img-box__lojas {
+  top: -10%;
+  left: calc(50% - 125px);
+  width:250px;
+  height: 250px;
+}
+
+.container__lojas .box__lojas:hover .img-box__lojas:after,
+.container__lojas .box__lojas:hover .img-box__lojas:before {
+  opacity: 0
+}
+
+.container__lojas .box__lojas:hover .img-box__lojas img {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  filter: saturate(70%) contrast(120%)
+}
+
+.box__lojas:hover .content__lojas {
+  bottom: 0;
+  opacity: 1;
+  transform: scale(1)
+}
+
+.content__lojas {
+  position: absolute;
+  bottom: -50%;
+  width: 100%;
+  height: 60%;
+  padding: 3em;
+  font-size: .8em;
+  text-align: center;
+  line-height: 1.4;
+  transition: bottom .35s cubic-bezier(.15, .78, .46, .8), transform .3s;
+  color: #000;
+  opacity: 0
+}
+
+.content__lojas h2 {
+  position: relative;
+  font-size: 1.4em;
+  font-weight: 700
+}
+
+.content__lojas h3 {
+  font-size: 1em;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-weight: 300!important;
+  color: #001A4D;
+  margin-bottom: .5em
+}
+
+.content__lojas h4 {
+  text-decoration: bold;
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+.content__lojas p {
+  font-size: 1.1em;
+  font-weight: 100;
+  margin-top: 0.6rem;
+  margin-bottom: .1em;
+}
+
+button.ghost-btn__lojas {
+  position: absolute;
+  z-index: 10;
+  margin-top: 1em;
+  text-align: center;
+  border: 0;
+  border-radius: 24px;
+  padding: 8px 38px;
+  background: #0C9623;
+  color: #fff;
+  border: 1px solid #003300;
+  font-weight: 100;
+  transition: 1s;
+  font-size: 1em;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+button.ghost-btn__lojas:hover { /* Depois que Aperta */
+  cursor: pointer;
+  background: #075B1B;
+  color:#fff;
+}
+
+a:link{
+text-decoration:none;
+}
+
+a{
+  color:inherit!important
+}
+
+
+@media screen and (min-width:600px) {
+  :root {
+    --boxheight: 520px
+  }
+}
+</style>
+<body>
+   <div class="container__lojas">
+      <div class="box__lojas">
+         <div class="img-box__lojas"  title="Carrão" data-author="Pet Shop"
+            ><img src="https://racoesrenata.com.br/img/st/1-stores_default.jpg" alt=""></div>
+         <div class="content__lojas">
+            <h2>Carrão</h2>
+            <h3>Pet Shop</h3>
+            <h4>Horário de Funcionamento:</h4>
+            <p>Seg a Sex: 9h às 20h<br>Sábado: 9h às 18h</p>
+            <p><b>Telefones: </b><a href="tel:551137912363">(11) 3791-2363</a></p>
+            <button class="ghost-btn__lojas"><a href="https://wa.me/5511963587592" style="a:visited{color:#fff}">WhatsApp</a></button>
+         </div>
+      </div>
+      <div class="box__lojas">
+         <div class="img-box__lojas"  title="Mãe dos Homens" data-author="Pet Shop"
+            ><img src="https://racoesrenata.com.br/img/st/2-stores_default.jpg" alt=""></div>
+         <div class="content__lojas">
+            <h2>Mãe dos Homens</h2>
+            <h3>Pet Shop</h3>
+            <h4>Horário de Funcionamento:</h4>
+            <p>Seg a Sex: 8h30 às 19h<br>Sábado: 8h30 às 18h</p>
+            <p><b>Telefones: </b><a href="tel:551129377781">(11) 2937-7781</a></p>
+            <button class="ghost-btn__lojas"><a href="https://wa.me/5511963587592">WhatsApp</a></button>
+         </div>
+      </div>
+      <div class="box__lojas">
+         <div class="img-box__lojas"  title="Timóteo Penteado" data-author="Pet Shop"
+            ><img src="https://racoesrenata.com.br/img/st/3-stores_default.jpg" alt=""></div>
+         <div class="content__lojas">
+            <h2>Timóteo Penteado</h2>
+            <h3>Pet Shop</h3>
+            <h4>Horário de Funcionamento:</h4>
+            <p>Seg a Sex: 9h às 20h<br>Sábado: 9h às 18h</p>
+            <p><b>Telefones: </b><a href="tel:551124517742">(11) 2451-7742</a></p>
+            <button class="ghost-btn__lojas"><a href="https://wa.me/5511963587592">WhatsApp</a></button>
+         </div>
+      </div>
+      <div class="box__lojas">
+         <div class="img-box__lojas"  title="Cocaia" data-author="Pet Shop"
+            ><img src="https://racoesrenata.com.br/img/st/4-stores_default.jpg" alt=""></div>
+         <div class="content__lojas">
+            <h2>Cocaia</h2>
+            <h3>Pet Shop e Clínica Veterinária</h3>
+            <h4>Horário de Funcionamento:</h4>
+            <p>Seg a Sex: 9h às 20h<br>Sábado: 9h às 18h</p>
+            <p><b>Telefones: </b><a href="tel:551124050777">(11) 2405-0777</a></p>
+            <button class="ghost-btn__lojas"><a href="https://wa.me/5511963587592">WhatsApp</a></button>
+         </div>
+      </div>
+   </div>
+</body>
