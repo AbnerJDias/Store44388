@@ -1,0 +1,140 @@
+<!-- Alterações feitas pelo Abner -->
+
+.left-bar{
+	display:none
+}
+
+.zfdiferenciais {
+	width: 100%;
+	max-width: 1336px;
+	margin: 0px auto 30px auto;
+	padding: 0 0 0 40px;
+	display: flex;
+	justify-content: space-between!important;
+}
+
+.zfdifericone {
+	width: 7%;
+}
+
+.zfdiferimg {
+	width: 70px!important;
+}
+
+.zfdifertit {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 400!important;
+	font-size: 18px!important;
+	color: #000;
+	text-transform: uppercase;
+}
+
+.zfdifertit b {
+	font-weight: 700!important;
+}
+
+.zfdifertext {
+	width: 15.65%;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 400!important;
+	font-size: 12px!important;
+	color: #595959;
+	padding-right: 40px;
+	text-align: left;
+}
+
+.zfdifertext a {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 400!important;
+	font-size: 12px!important;
+	color: #000;
+	text-decoration: underline;
+}
+
+.zfdifertextf {
+	width: 15.65%;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 400!important;
+	font-size: 12px!important;
+	color: #595959;
+	text-align: justify;
+}
+
+@media screen and (max-width: 1350px) {
+	/* diferenciais */
+	.zfdiferenciais {
+		width: 98%;
+	}
+	.zfdifertit {
+		font-size: 18px;
+		line-height: 20px;
+	}
+	.zfdifertext,
+	.zfdifertextf {
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 1270px) {
+	/* diferenciais */
+	.zfdiferenciais {
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		padding: 0 0 0 0;
+	}
+	.zfdifericone {
+		width: 9%;
+		margin-top: 40px;
+	}
+	.zfdifertext,
+	.zfdifertextf {
+		width: 39%;
+		margin-top: 40px;
+		padding-right: 20px;
+	}
+}
+
+@media screen and (max-width: 1010px) {
+	/* diferenciais */
+	.zfdiferenciais {
+		width: 96%;
+	}
+	.zfdifericone {
+		width: 10%;
+	}
+	.zfdifertext,
+	.zfdifertextf {
+		width: 37%;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	/* diferenciais */
+	.zfdiferenciais {
+		width: 95%;
+	}
+	.zfdifericone {
+		width: 15%;
+	}
+	.zfdifertext,
+	.zfdifertextf {
+		width: 31%;
+		padding-right: 15px;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	/* diferenciais */
+	.zfdiferenciais {
+		width: 94%;
+	}
+	.zfdifericone {
+		width: 20%;
+	}
+	.zfdifertext,
+	.zfdifertextf {
+		width: 75%;
+		padding-right: 10px;
+	}
+}
