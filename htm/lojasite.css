@@ -500,8 +500,8 @@ a #HeaderCartTotalFC{position:relative;top:3px;font-size:15px;font-family:'Open 
 .left-bar h2, .EstListCat li{padding:7px 0 !important;border-bottom:1px solid #cccccc}
 .EstListCat li a{font-size:13px;color:#666666}
 .EstListCat li:last-child{border-bottom:0}
-.EstListCat .ImgClosed{background:url("/icons/icopackagev1/svg/essential-light-02-chevron-right.svg") no-repeat left !important;margin:0 5px 0 0}
-.EstListCat .ImgOpened{background:url("/icons/icopackagev1/svg/essential-light-04-chevron-down.svg") no-repeat left !important;margin:0 5px 0 0}
+.EstListCat .ImgClosed{background:url("https://www.rumo.com.br/icons/icopackagev1/svg/essential-light-02-chevron-right.svg") no-repeat left !important;margin:0 5px 0 0}
+.EstListCat .ImgOpened{background:url("https://www.rumo.com.br/icons/icopackagev1/svg/essential-light-04-chevron-down.svg") no-repeat left !important;margin:0 5px 0 0}
 .PathCat1{padding-left:0}
  
 /* Checkout */
